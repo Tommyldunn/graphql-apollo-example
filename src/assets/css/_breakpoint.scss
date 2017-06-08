@@ -1,0 +1,51 @@
+@import '../../../node_modules/breakpoint-sass/stylesheets/breakpoint';
+
+
+$bp__mobile:  max-width 699px;
+$bp__tablet:  min-width 700px;
+$bp__desktop: min-width 1024px;
+$bp__wide:    min-width 1280px;
+$bp__ultra:   min-width 1500px;
+
+@mixin mobile() {
+	@include breakpoint($bp__mobile) {
+		@content;
+	}
+}
+
+@mixin tablet() {
+	@include breakpoint($bp__tablet) {
+		@content;
+	}
+}
+
+@mixin desktop() {
+	@include breakpoint($bp__desktop) {
+		@content;
+	}
+}
+
+
+@mixin wide() {
+	@include breakpoint($bp__wide) {
+		@content;
+	}
+}
+
+@mixin ultra() {
+	 @include breakpoint($bp__ultra) {
+    	@content;
+	}
+}
+
+@mixin ip5(){
+	@media screen and (device-aspect-ratio: 40/71) {
+		@content;
+	}
+}
+
+@mixin ip6(){
+	@media screen and (device-aspect-ratio: 375/667) {
+		@content;
+	}
+}
